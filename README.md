@@ -27,12 +27,7 @@ fast and lightweight <ins>multimodal LLM</ins> inference engine for mobile and e
 
 mllm is a lightweight, fast, and easy-to-use (multimodal) on-device LLM inference engine for mobile devices (mainly supporting CPU/NPU), initiated by the research groups led by [Mengwei Xu](https://xumengwei.github.io/) (BUPT) and [Xuanzhe Liu](https://www.liuxuanzhe.com/) (PKU).
 
-## Recent update
-- [2024 November 21] Support new model: Phi 3 Vision https://github.com/UbiquitousLearning/mllm/pull/186
-- [2024 August 30] Support new model: MiniCPM 2B https://github.com/UbiquitousLearning/mllm/pull/132
-- [2024 August 15] Support new model: Phi 3 mini https://github.com/UbiquitousLearning/mllm/pull/119
-- [2024 Aug 10] Supporting Qualcomm NPU: https://github.com/UbiquitousLearning/mllm/pull/112 | [try it out](https://github.com/UbiquitousLearning/mllm/tree/main/src/backends/qnn) | [paper](https://arxiv.org/pdf/2407.05858v1)
-
+**This repository is a customized version of [mllm](https://github.com/UbiquitousLearning/mllm) for hardware control(e.g. CPU/RAM DVFS).**
 
 ### Contents
 - [Android Demo](#android-demo)
@@ -107,25 +102,12 @@ mllm is a lightweight, fast, and easy-to-use (multimodal) on-device LLM inferenc
 | [OpenELM 1.1B](https://github.com/apple/corenet/tree/main/projects/openelm) | [✔️](https://huggingface.co/mllmTeam/openelm-1.1b-mllm/tree/main)| [✔️](https://huggingface.co/mllmTeam/openelm-1.1b-mllm/tree/main)| |
 [PhoneLM 1.5B](https://github.com/UbiquitousLearning/PhoneLM) | [✔️](https://huggingface.co/mllmTeam/phonelm-1.5b-mllm/tree/main)| [✔️](https://huggingface.co/mllmTeam/phonelm-1.5b-mllm/tree/main)| [✔️](https://huggingface.co/mllmTeam/phonelm-1.5b-mllm/tree/main)|
 
-### Multimodal models
-
-| Model                                                                       | CPU <br> FP32 | CPU <br> INT4  | 
-|-----------------------------------------------------------------------------|------|-----|
-| [Fuyu 8B](https://www.adept.ai/blog/fuyu-8b)                                | [✔️](https://huggingface.co/mllmTeam/fuyu-8b-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/fuyu-8b-mllm/tree/main)   |  
-| [Vision Transformer](https://github.com/google-research/vision_transformer) | [✔️](https://huggingface.co/mllmTeam/vit-base-patch16-224-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/vit-base-patch16-224-mllm/tree/main)   | 
-| [CLIP](https://github.com/openai/CLIP)                                      | [✔️](https://huggingface.co/mllmTeam/clip-vit-base-patch32-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/clip-vit-base-patch32-mllm/tree/main)   |
-| [ImageBind](https://github.com/facebookresearch/ImageBind) (3 modalities)   | [✔️](https://huggingface.co/mllmTeam/imagebind_huge-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/imagebind_huge-mllm/tree/main)   | 
-| [LLaVA 7B](https://github.com/haotian-liu/LLaVA)                            | [✔️](https://huggingface.co/mllmTeam/llava-1.5-7b-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/llava-1.5-7b-mllm/tree/main)   |
-| [Phi-3-Vision](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct)                            | [✔️](https://huggingface.co/mllmTeam/phi-3-vision-instruct-mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/phi-3-vision-instruct-mllm/tree/main)   |
-| [Qwen2-VL 2B](https://github.com/QwenLM/Qwen2-VL)                            | [✔️](https://huggingface.co/mllmTeam/qwen-2-vl-2b-instruct--mllm/tree/main)  | [✔️](https://huggingface.co/mllmTeam/qwen-2-vl-2b-instruct--mllm/tree/main)   |
-
-
 ## Quick Start
 
 ### Get the Code
 
 ```bash
-git clone https://github.com/UbiquitousLearning/mllm
+git clone https://github.com/kjh2159/mllm
 cd mllm
 ```
 
@@ -140,53 +122,11 @@ Building mllm requires following tools:
 
 > Note that building OpenMP libs on macOS may fail due to Apple LLVM compiler, so we disable OpenMP on macOS by default, you may experience slower performance on macOS. Build mllm is more recommended on Linux.
 
-### Run Qwen with Hexagon NPU accelerating using QNN
-
-*`NOTE:` The QNN backend is preliminary version which can do end-to-end inference. It is still under active development for better performance and more supported models.*
-
-We support running Qwen-1.5-1.8B-Chat using [Qualcomm QNN](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk) to get Hexagon NPU acceleration on devices with Snapdragon 8 Gen3. The details of QNN environment set up and design is [here](./src/backends/qnn/README.md). The prefilling stage is performered by QNN & CPU, and the inference stage is performed by CPU.
-
-Build the target with QNN backend.
-
-```bash
-cd ../script
-./build_qnn_android.sh
-```
-
-Download the model from [here](https://huggingface.co/mllmTeam/qwen-1.5-1.8b-chat-mllm/blob/main/), or using the following instructions
-
-```bash
-mkdir ../models && cd ../models
-# Download int8 model used by npu & q4k model used by cpu
-wget https://huggingface.co/mllmTeam/qwen-1.5-1.8b-chat-mllm/resolve/main/qwen-1.5-1.8b-chat-int8.mllm?download=true  -O qwen-1.5-1.8b-chat-int8.mllm
-wget https://huggingface.co/mllmTeam/qwen-1.5-1.8b-chat-mllm/resolve/main/qwen-1.5-1.8b-chat-q4k.mllm?download=true  -O qwen-1.5-1.8b-chat-q4k.mllm
-```
-
-Run on an android phone with at least 16GB of memory.
-
-```bash
-cd ../script
-./run_qwen_npu.sh
-```
-
-There are two arguments in the executable. `-s` is for the sequence length of prefilling, the default value is 64 in the demo we provided. `-c` for type of QNN prefilling options, when it is set to 1, the input will be splited into many chunks of sequence 32 and be executed in a pipeline. When it is set to 0, the input will be executed in one chunk.
-
-Result are as followed:
-
-```
-> ./main_qwen_npu -s 64 -c 1
-[Q] <|im_start|>system
-You are a helpful assistant.<|im_end|>
-<|im_start|>user
-Give me a short introduction to large language model.<|im_end|>
-<|im_start|>assistant
-
-[A] A short introduction to a large language model is a type of artificial intelligence language model that is designed to understand and generate human language text. These models are typically trained on large amounts of text data, such as books, articles, and other written materials, to learn the patterns and structures of human language. They use a combination of natural language processing (NLP)
-```
-
 ### Run with the CPU of Android
 
-#### Build
+*`NOTE:` This project requires to root an ndroid phone. Also, depending on your phones, RAM DVFS may not be supported. Please first check if your phone is available for RAM DVFS*
+
+#### 1. Build
 
   ```bash
   export ANDROID_NDK=/path/to/your/ndk
@@ -194,103 +134,36 @@ Give me a short introduction to large language model.<|im_end|>
   ./build_android.sh
   ```
 
-#### Run Fuyu-8B
+#### 2. Download Qwen1.5 0.5B
 
-Download the model from [here](https://huggingface.co/mllmTeam/fuyu-8b-mllm/tree/main/), or using the following instructions
+Download the model from [here](https://huggingface.co/mllmTeam/qwen-1.5-0.5b-mllm/tree/main) and place the model file in the directory of `models`, or using the following instructions
 
 ```bash
 mkdir ../models && cd ../models
-# Download fuyu-8b-q4_k.mllm
-wget https://huggingface.co/mllmTeam/fuyu-8b-mllm/resolve/main/fuyu-8b-q4_k.mllm?download=true  -O fuyu-8b-q4_k.mllm
+# Download qwen-1.5-0.5b-q4_k.mllm
+wget https://huggingface.co/mllmTeam/qwen-1.5-0.5b-mllm/resolve/main/qwen-1.5-0.5b-q4_k.mllm?download=true  -O qwen-1.5-0.5b-q4_k.mllm
 ```
 
-Run on an android phone with at least 12GB of memory.
+#### 3. Run remote on Android Phone
 
 ```bash
-cd ../script
-./run_fuyu.sh
+sh scripts-arm/run-setup.sh
+sh scripts-arm/run-remote.sh
 ```
 
 Result are as followed:
 
 ```
-> ./demo_fuyu
-[Q] [../assets/bus.png]Generate a coco-style caption.
+[Q] Which airport is located in Maine, Sacramento International Airport or Knox County Regional Airport?
+[A] K Knox County Regional Airport is located in Knox County, Maine
 
-[A]  A blue bus driving down▁the▁road next▁to a sidewalk.
-[Q] [../assets/two_cats.jpg]What's this?
-
-[A]  Two cats laying on▁top▁of a pink blanket.
-```
-
-#### Run LLaMA-2-7B
-
-Download model from [here](https://huggingface.co/mllmTeam/llama-2-7b-mllm/tree/main/), or using the following instructions
-
-```bash
-mkdir ../models && cd ../models
-# Dowload llama-2-7b-chat-q4_k.mllm
-wget https://huggingface.co/mllmTeam/llama-2-7b-mllm/resolve/main/llama-2-7b-chat-q4_k.mllm?download=true  -O llama-2-7b-chat-q4_k.mllm
-```
-
-Run on an android phone with at least 12GB of memory.
-
-```bash
-cd ../script
-./run_llama.sh
-```
-
-Result are as followed:
-
-```
-> ./demo_llama
-[Q]  Hello, who are you?
-[A]
-
-I am a bot, I'm here to help answer your questions and provide information. I'm just an AI, I don't have personal experiences or feelings like humans do, but I'm here to help you with any questions you may have. Is there something specific you would like to know or talk about?
-[Q]  What can you do?
-[A]
-I can help with a wide range of tasks, including:
-  
-* Answering questions on various topics, such as science, history, technology, and more.
-* Providing information on different subjects, such as culture, entertainment, and lifestyle.
-* Helping with language-related tasks, such as translating text or improving grammar and syntax.
-* Generating text, such as articles, stories, or even entire books.
-* Assisting with coding
-[Q]  Please introduce Beijing University of Posts and Telecommunications.
-[A]
-Beijing University of Posts and Telecommunications (BUPT) is a public research university located in Beijing, China. It was established in 1955 and is one of the top universities in China, with a strong focus on engineering, technology, and telecommunications.
-BUPT offers a wide range of undergraduate and graduate programs in fields such as computer science, electrical engineering, software engineering, and communication engineering. The university
-```
-
-#### Run ImageBind
-
-Download model from [here](https://huggingface.co/mllmTeam/imagebind_huge-mllm/tree/main), or using the following instructions
-
-```bash
-mkdir ../models && cd ../models
-# Download imagebind_huge-q4_k.mllm
-wget https://huggingface.co/mllmTeam/imagebind_huge-mllm/resolve/main/imagebind_huge-q4_k.mllm?download=true -O imagebind_huge-q4_k.mllm 
-```
-
-Run on an android phone with at least 4GB of memory.
-
-```bash
-cd ../script
-./run_imagebind.sh
-```
-
-Result are as followed:
-```
-> ./demo_imagebind 
-vision X text :
-0.9985647 0.0013827 0.0000526 
-0.0000365 0.9998636 0.0000999 
-0.0000115 0.0083149 0.9916736 
-vision X audio :
-0.8054272 0.1228001 0.0717727 
-0.0673458 0.8429284 0.0897258 
-0.0021967 0.0015335 0.9962698 
+===========================================
+            Inference
+-------------------------------------------
+  Load time: 0.540094 s
+  Prefilling speed: 75.0717 tokens/s
+  Decoding speed: 26.0652 tokens/s
+===========================================
 ```
 
 
@@ -323,6 +196,7 @@ cd ./bin
 cd ./bin
 ./demo_imagebind -m ../models/imagebind_huge-q4_k.mllm -v ../vocab/clip_vocab.mllm
 ```
+
 
 
 ## Customization

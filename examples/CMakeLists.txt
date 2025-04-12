@@ -31,6 +31,8 @@ macro(func_llm_add_executable target)
         ${PROJECT_SOURCE_DIR}/src/tokenizers/Unicode.cpp
         ${PROJECT_SOURCE_DIR}/src/tokenizers/UnicodeData.cpp
         ${PROJECT_SOURCE_DIR}/src/processor/PreProcess.cpp
+        ${PROJECT_SOURCE_DIR}/src/utils/utils.cpp
+        ${PROJECT_SOURCE_DIR}/src/utils/json.hpp
     )
     func_link_libaries(${target})
 endmacro()
@@ -79,6 +81,8 @@ func_llm_add_executable(demo_bert)
 func_llm_add_executable(demo_phonelm)
 func_llm_add_executable(demo_llama3)
 func_llm_add_executable(demo_minicpm_moe_mbm)
+func_llm_add_executable(run_qwen)
+func_llm_add_executable(stream_qwen)
 
 
 
