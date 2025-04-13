@@ -7,10 +7,12 @@ cmake .. \
 -DCMAKE_BUILD_TYPE=Release \
 -DANDROID_ABI="arm64-v8a" \
 -DANDROID_NATIVE_API_LEVEL=android-28  \
+-DCMAKE_C_FLAGS="-march=armv8-a -pthread -mcpu=native+dotprod" \
+-DCMAKE_CXX_FLAGS="-march=armv8-a -pthread -mcpu=native+dotprod" \
 -DNATIVE_LIBRARY_OUTPUT=. -DNATIVE_INCLUDE_OUTPUT=. $1 $2 $3 \
 -DDEBUG=OFF \
 -DTEST=OFF \
 -DARM=ON \
--DAPK=OFF
+-DAPK=OFF \
 
 make -j$(nproc)

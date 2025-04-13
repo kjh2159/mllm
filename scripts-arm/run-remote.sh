@@ -22,4 +22,7 @@ adb shell 'cd /data/local/tmp/mllm/bin && ./"'"$RUN"'" \
   -L 5 \
   -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
   -O /data/local/tmp/mllm/output/ \
-  -S 1'
+  -S 0 \
+  -D Pixel9 \
+  --cpu 16 \
+  --ram 12'

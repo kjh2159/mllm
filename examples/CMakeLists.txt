@@ -33,6 +33,9 @@ macro(func_llm_add_executable target)
         ${PROJECT_SOURCE_DIR}/src/processor/PreProcess.cpp
         ${PROJECT_SOURCE_DIR}/src/utils/utils.cpp
         ${PROJECT_SOURCE_DIR}/src/utils/json.hpp
+        ${PROJECT_SOURCE_DIR}/src/hardware/device.cpp
+        ${PROJECT_SOURCE_DIR}/src/hardware/dvfs.cpp
+        ${PROJECT_SOURCE_DIR}/src/hardware/record.cpp
     )
     func_link_libaries(${target})
 endmacro()

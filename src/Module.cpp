@@ -42,8 +42,9 @@ vector<double> Module::profiling(string name) {
         double sum_decoding_time = std::accumulate(std::begin(inference_times_) + 1, std::end(inference_times_), 0.0);
         double mean_decoding_time = sum_decoding_time / (inference_times_.size() - 1);
         double decoding_speed = 1000 / mean_decoding_time;
+        double ttft = (inference_times_[0] + inference_times_[1])/1000.0f; // time to first token (sec)
         std::cout << "  Decoding speed: " << decoding_speed << " tokens/s" << std::endl;
-        output = {load_time_s, prefile_speed, decoding_speed};
+        output = {load_time_s, prefile_speed, decoding_speed, (double) prefilling_token_size_, (double) (inference_times_.size()-1), ttft};
     } else {
         double sum_time = std::accumulate(std::begin(inference_times_), std::end(inference_times_), 0.0);
         double mean_time = sum_time / (inference_times_.size());
