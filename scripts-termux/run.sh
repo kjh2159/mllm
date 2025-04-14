@@ -10,7 +10,7 @@ else
     RUN=$1
 fi
 
-su -c "input keyevent 26"
+#su -c "input keyevent 26"
 
 
 # CPU 0 RAM 0
@@ -23,7 +23,7 @@ su -c "input keyevent 26"
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -43,7 +43,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -63,7 +63,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -83,7 +83,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -103,7 +103,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -123,7 +123,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -143,7 +143,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -163,7 +163,7 @@ sleep 60
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -183,7 +183,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -203,7 +203,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -223,7 +223,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -243,7 +243,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -263,7 +263,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -283,7 +283,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -303,7 +303,7 @@ sleep 120
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -323,7 +323,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -343,7 +343,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -363,7 +363,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -383,7 +383,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -403,7 +403,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -423,7 +423,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -443,7 +443,7 @@ sleep 240
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -463,7 +463,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -483,7 +483,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -503,7 +503,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -523,7 +523,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -543,7 +543,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -563,7 +563,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -583,7 +583,7 @@ sleep 300
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -603,7 +603,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -623,7 +623,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -643,7 +643,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -663,7 +663,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -683,7 +683,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -703,7 +703,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -723,7 +723,7 @@ sleep 420
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -743,7 +743,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -763,7 +763,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -783,7 +783,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -803,7 +803,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -823,7 +823,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -843,7 +843,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -863,7 +863,7 @@ sleep 480
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -883,7 +883,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -903,7 +903,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -923,7 +923,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -943,7 +943,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -963,7 +963,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -983,7 +983,7 @@ sleep 600
   -l 4096 \
   -i 1 \
   -s 1 \
-  -L 50 \
+  -L 30 \
   -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
@@ -993,5 +993,5 @@ sleep 600
 
 sleep 600
 
-su -c "input keyevent 26"
-su -c "input keyevent 82"
+#su -c "input keyevent 26"
+#su -c "input keyevent 82"
