@@ -4,10 +4,10 @@
 # This shell script is run on terminal
 #
 
-if [ -z "$1" ]; then
+if [ -z "$2" ]; then
     RUN="stream_qwen"
 else
-    RUN=$1
+    RUN=$2
 fi
 
 adb shell 'cd /data/local/tmp/mllm/bin && ./"'"$RUN"'" \
@@ -17,7 +17,7 @@ adb shell 'cd /data/local/tmp/mllm/bin && ./"'"$RUN"'" \
   -b 0.5B \
   -t 4 \
   -l 4096 \
-  -i 1 \
+  -i 0 \
   -s 1 \
   -L 5 \
   -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \

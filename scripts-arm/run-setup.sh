@@ -80,3 +80,10 @@ if [ $? -eq 0 ]; then
 else
     echo "[ERROR] $SCRIPT is not pushed"
 fi
+
+adb shell "su -c '[ -x /data/local/tmp/mllm ] || chmod -R 777 /data/local/tmp/mllm'"
+if [ $? -ne 0 ]; then
+    echo "Root Authority Denied"
+    exit 1
+fi
+echo directory is executable
