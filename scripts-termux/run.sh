@@ -15,16 +15,16 @@ su -c "input keyevent 26"
 
 # CPU 0 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -35,16 +35,16 @@ sleep 300
 
 # CPU 0 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -55,16 +55,16 @@ sleep 300
 
 # CPU 0 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -75,16 +75,16 @@ sleep 300
 
 # CPU 0 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -95,16 +95,16 @@ sleep 300
 
 # CPU 0 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -115,16 +115,16 @@ sleep 300
 
 # CPU 0 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -135,16 +135,16 @@ sleep 300
 
 # CPU 0 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -155,16 +155,16 @@ sleep 300
 
 # CPU 2 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -175,16 +175,16 @@ sleep 420
 
 # CPU 2 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -195,16 +195,16 @@ sleep 420
 
 # CPU 2 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -215,16 +215,16 @@ sleep 420
 
 # CPU 2 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -235,16 +235,16 @@ sleep 420
 
 # CPU 2 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -255,16 +255,16 @@ sleep 420
 
 # CPU 2 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -275,16 +275,16 @@ sleep 420
 
 # CPU 2 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -295,16 +295,16 @@ sleep 420
 
 # CPU 6 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -315,16 +315,16 @@ sleep 420
 
 # CPU 6 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -335,16 +335,16 @@ sleep 420
 
 # CPU 6 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -355,16 +355,16 @@ sleep 420
 
 # CPU 6 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -375,16 +375,16 @@ sleep 420
 
 # CPU 6 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -395,16 +395,16 @@ sleep 420
 
 # CPU 6 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -415,16 +415,16 @@ sleep 420
 
 # CPU 6 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -435,16 +435,16 @@ sleep 420
 
 # CPU 8 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -455,16 +455,16 @@ sleep 540
 
 # CPU 8 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -475,16 +475,16 @@ sleep 540
 
 # CPU 8 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -495,16 +495,16 @@ sleep 540
 
 # CPU 8 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -515,16 +515,16 @@ sleep 540
 
 # CPU 8 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -535,16 +535,16 @@ sleep 540
 
 # CPU 8 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -555,16 +555,16 @@ sleep 540
 
 # CPU 8 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -575,16 +575,16 @@ sleep 540
 
 # CPU 10 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -595,16 +595,16 @@ sleep 660
 
 # CPU 10 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -615,16 +615,16 @@ sleep 660
 
 # CPU 10 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -635,16 +635,16 @@ sleep 660
 
 # CPU 10 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -655,16 +655,16 @@ sleep 660
 
 # CPU 10 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -675,16 +675,16 @@ sleep 660
 
 # CPU 10 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -695,16 +695,16 @@ sleep 660
 
 # CPU 10 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -715,16 +715,16 @@ sleep 660
 
 # CPU 12 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -735,16 +735,16 @@ sleep 780
 
 # CPU 12 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -755,16 +755,16 @@ sleep 780
 
 # CPU 12 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -775,16 +775,16 @@ sleep 780
 
 # CPU 12 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -795,16 +795,16 @@ sleep 780
 
 # CPU 12 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -815,16 +815,16 @@ sleep 780
 
 # CPU 12 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -835,16 +835,16 @@ sleep 780
 
 # CPU 12 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -855,16 +855,16 @@ sleep 780
 
 # CPU 16 RAM 0
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -875,16 +875,16 @@ sleep 900
 
 # CPU 16 RAM 4
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -895,16 +895,16 @@ sleep 900
 
 # CPU 16 RAM 6
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -915,16 +915,16 @@ sleep 900
 
 # CPU 16 RAM 9
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -935,16 +935,16 @@ sleep 900
 
 # CPU 16 RAM 10
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -955,16 +955,16 @@ sleep 900
 
 # CPU 16 RAM 11
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
@@ -975,16 +975,16 @@ sleep 900
 
 # CPU 16 RAM 12
 ./bin-arm/"$RUN" \
-  -m /data/local/tmp/mllm/models/qwen-1.5-0.5b-q4_k.mllm \
-  -v /data/local/tmp/mllm/vocab/qwen_vocab.mllm \
-  -e /data/local/tmp/mllm/vocab/qwen_merges.txt \
+  -m models/qwen-1.5-0.5b-q4_k.mllm \
+  -v vocab/qwen_vocab.mllm \
+  -e vocab/qwen_merges.txt \
   -b 0.5B \
   -t 4 \
   -l 4096 \
   -i 1 \
   -s 1 \
   -L 50 \
-  -I /data/local/tmp/mllm/dataset/hotpot_qa.csv \
+  -I dataset/hotpot_qa.csv \
   -O output/ \
   -S 0 \
   -D Pixel9 \
