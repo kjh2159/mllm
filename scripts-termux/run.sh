@@ -288,7 +288,7 @@ sleep 120
   -O output/ \
   -S 0 \
   -D Pixel9 \
-  --cpu 0 \
+  --cpu 2 \
   --ram 12
 
 sleep 120
@@ -848,7 +848,7 @@ sleep 480
   -O output/ \
   -S 0 \
   -D Pixel9 \
-  --cpu 10 \
+  --cpu 12 \
   --ram 12
 
 sleep 480
