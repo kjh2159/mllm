@@ -10,7 +10,13 @@ else
     RUN=$1
 fi
 
-#su -c "input keyevent 26"
+#su -c "input keyevent 26" #holder
+su -c "echo 0 > /sys/class/backlight/panel0-backlight/brightness"
+
+# silver core clock control (#0 core cannot be offline)
+su -c "echo 0 > /sys/devices/system/cpu/cpu1/online"
+su -c "echo 0 > /sys/devices/system/cpu/cpu2/online"
+su -c "echo 0 > /sys/devices/system/cpu/cpu3/online"
 
 
 # CPU 0 RAM 0
@@ -995,3 +1001,4 @@ sleep 600
 
 #su -c "input keyevent 26"
 #su -c "input keyevent 82"
+su -c "echo 512 > /sys/class/backlight/panel0-backlight/brightness"

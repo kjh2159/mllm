@@ -95,6 +95,7 @@ int main(int argc, char **argv) {
    // DVFS setting
     DVFS dvfs(device_name);
     vector<int> freq_config = dvfs.get_cpu_freqs_conf(cpu_clk_idx);
+    for (auto f :freq_config) { cout << f << " "; } cout << endl; // to validate (print freq-configuration)
     dvfs.output_filename = output_hard; // dvfs.output_filename requires hardware recording output path
     dvfs.set_cpu_freq(freq_config);
     dvfs.set_ram_freq(ram_clk_idx);
@@ -105,14 +106,10 @@ int main(int argc, char **argv) {
     if (qa_len == -1) { qa_limit = qa_list.size(); }
     else { qa_limit = MIN(qa_list.size(), qa_start + qa_len) - 1; }
     
-
     // measurement start
     auto start_sys_time = chrono::system_clock::now();
     std::thread record_thread = std::thread(record_hard, std::ref(sigterm), dvfs);
 
-    /*
-    record 함수 구현
-    */
     while ( (qa_now - qa_start) < qa_limit ) {
         string question = qa_list[qa_now][1];
         string answer;
