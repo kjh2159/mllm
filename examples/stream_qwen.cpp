@@ -19,6 +19,7 @@
 #include <cstdlib>
 #include <thread>
 #include <atomic>
+#include <unistd.h>
 
 using namespace mllm;
 using namespace std;
@@ -29,6 +30,7 @@ std::atomic_bool sigterm(false);
 int main(int argc, char **argv) {
     std::iostream::sync_with_stdio(false);
     cmdline::parser cmdParser;
+    pid_t pid = getpid();
 
     // arg parser: BASIC
     cmdParser.add<string>("vocab", 'v', "specify mllm tokenizer model path", false, "../vocab/qwen_vocab.mllm");
@@ -92,11 +94,13 @@ int main(int argc, char **argv) {
     vector<vector<string>> qa_list = readCSV(input_path); // qa load
     vector<string> ans; // qa load
 
-   // DVFS setting
+    // DVFS setting
     DVFS dvfs(device_name);
     vector<int> freq_config = dvfs.get_cpu_freqs_conf(cpu_clk_idx);
-    for (auto f :freq_config) { cout << f << " "; } cout << endl; // to validate (print freq-configuration)
     dvfs.output_filename = output_hard; // dvfs.output_filename requires hardware recording output path
+    cout << pid << endl;
+    for (auto f :freq_config) { cout << f << " "; } cout << endl; // to validate (print freq-configuration)
+    
     dvfs.set_cpu_freq(freq_config);
     dvfs.set_ram_freq(ram_clk_idx);
     const vector<string> infer_record_names = {"sys_time", "prefill_speed", "decode_speed", "prefill_token", "decode_token", "ttft"};

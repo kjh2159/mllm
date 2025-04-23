@@ -35,16 +35,13 @@ mllm is a lightweight, fast, and easy-to-use (multimodal) on-device LLM inferenc
 - [Quick Start](#quick-start)
     - [Get the Code](#get-the-code)
     - [Check prerequisites](#check-prerequisites)
-    - [Run Qwen with Hexagon NPU accelerating using QNN](#run-qwen-with-hexagon-npu-accelerating-using-qnn)
     - [Run with the CPU of Android](#run-with-the-cpu-of-android)
+    - [Run with the CPU on Termux](#run-with-the-cpu-on-termux)
     - [Run for Linux](#run-for-linux)
 - [Customization](#customization)
     - [Convert models](#convert-models)
     - [Convert vocabulary](#convert-vocabulary)
     - [Quantize models](#quantize-models)
-- [Roadmap](#roadmap)
-- [Documentation](#documentation)
-- [Contribution](#contribution)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
@@ -124,7 +121,7 @@ Building mllm requires following tools:
 
 ### Run with the CPU of Android
 
-*`NOTE:` This project requires to root an ndroid phone. Also, depending on your phones, RAM DVFS may not be supported. Please first check if your phone is available for RAM DVFS*
+*`NOTE:` This project requires to root an android phone. Also, depending on your phones, RAM DVFS may not be supported. Please first check if your phone is available for RAM DVFS*
 
 #### 1. Build
 
@@ -167,36 +164,37 @@ Result are as followed:
 ```
 
 
-### Run for Linux
+### Run with the CPU on Termux
 
-#### Build
+*`NOTE:` This project requires to root an android phone. Also, depending on your phones, RAM DVFS may not be supported. Please first check if your phone is available for RAM DVFS*
+
+#### 1. Build
+
 ```bash
 cd scripts
-./build.sh
- ```
-
-#### Run Fuyu-8B
-
-```bash
-cd ./bin
-./demo_fuyu -m ../models/fuyu-8b-q4_k.mllm -v ../vocab/fuyu_vocab.mllm
- ```
-
-#### Run LLaMA-2-7B
-
-```bash
-cd ./bin
-./demo_llama -m ../models/llama-2-7b-chat-q4_k.mllm -v ../vocab/llama2_vocab.mllm
+sh build.sh
 ```
 
+#### 2. Download Qwen1.5 0.5B
 
-#### Run ImageBind
+Download the model from [here](https://huggingface.co/mllmTeam/qwen-1.5-0.5b-mllm/tree/main) and place the model file in the directory of `models`, or using the following instructions
 
 ```bash
-cd ./bin
-./demo_imagebind -m ../models/imagebind_huge-q4_k.mllm -v ../vocab/clip_vocab.mllm
+mkdir ../models && cd ../models
+# Download qwen-1.5-0.5b-q4_k.mllm
+wget https://huggingface.co/mllmTeam/qwen-1.5-0.5b-mllm/resolve/main/qwen-1.5-0.5b-q4_k.mllm?download=true  -O qwen-1.5-0.5b-q4_k.mllm
 ```
 
+#### 3. Run remote on Android Phone
+
+```bash
+sh scripts-termux/run-setup.sh
+sh scripts-termux/run.sh
+
+# or
+chmod +x scripts-termux/run.sh
+su -c "taskset f0 scripts-termux/run.sh" # to control cpu core allocation
+```
 
 
 ## Customization
@@ -241,23 +239,6 @@ mllm only support two quantize modes: Q4_0 and Q4_K.
 cd bin
 ./quantize model.mllm model_q4_k.mllm Q4_K
 ```
-
-## Roadmap
-
-- More backends like QNN
-- More models like PandaGPT
-- More optimizations like LUT-GEMM
-- [More..](https://ubiquitouslearning.github.io/mllm_website/roadmap/roadmap/)
-
-## Documentation
-
-See the [documentation](https://ubiquitouslearning.github.io/mllm_website/introduction/getstarted/) here for more
-information
-
-## Contribution
-
-Read the [contribution](https://ubiquitouslearning.github.io/mllm_website/contributing/contributing/) before you
-contribute.
 
 ## Acknowledgments
 
